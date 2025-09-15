@@ -1,7 +1,4 @@
 # NEAR FT Helper (`near-ft-helper`)
-
-**GitHub Repository:** [https://github.com/Psianturi/near-ft-helper](https://github.com/Psianturi/near-ft-helper)
-
 ---
 
 ## 🧩 What is this?
