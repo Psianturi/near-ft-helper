@@ -1,4 +1,7 @@
 # NEAR FT Helper (`near-ft-helper`)
+
+**Repository**: https://github.com/Psianturi/near-ft-helper
+**Status**: ✅ Production Ready - Automated sandbox deployment and testing
 ---
 
 ## 🧩 What is this?
@@ -17,11 +20,14 @@ It contains a single script (`deploy.js`) that automates the entire setup for a 
 
 ## 🚀 How to Use for Sandbox Testing
 
-This script must be running in the background **before** you start the `token-claim-service`.
+*   Clone this repository:
+   ```bash
+   git clone https://github.com/Psianturi/near-ft-helper.git
+   cd near-ft-helper
 
 ### Step 1: Run `deploy.js`
 
-From within the `near-ft-workspaces` directory, run:
+From within the `near-ft-helper` directory, run:
 
 ```bash
 # Installs dependencies like near-workspaces-js

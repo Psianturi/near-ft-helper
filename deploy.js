@@ -84,7 +84,24 @@ async function main() {
     console.log('\n❌❌❌ End-to-End Test Failed! ❌❌❌');
   }
 
-  // The sandbox worker will automatically shut down when the script exits.
+  // Keep the sandbox running for benchmarking
+  console.log('\n🔄 Sandbox is now running and ready for benchmarking...');
+  console.log('📡 RPC endpoint: http://localhost:3030');
+  console.log('⏹️  Press Ctrl+C to stop the sandbox');
+
+  // Keep the process alive
+  process.on('SIGINT', () => {
+    console.log('\n🛑 Shutting down sandbox...');
+    process.exit(0);
+  });
+
+  process.on('SIGTERM', () => {
+    console.log('\n🛑 Shutting down sandbox...');
+    process.exit(0);
+  });
+
+  // Keep alive indefinitely
+  await new Promise(() => {}); // Never resolves
 }
 
 main().catch(console.error);

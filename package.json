@@ -1,7 +1,7 @@
 {
   "name": "near-ft-workspaces",
   "version": "1.0.0",
-  "description": "",
+  "description": "---",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,5 +12,13 @@
   "type": "commonjs",
   "dependencies": {
     "near-workspaces": "^4.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Psianturi/near-ft-helper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Psianturi/near-ft-helper/issues"
+  },
+  "homepage": "https://github.com/Psianturi/near-ft-helper#readme"
 }
