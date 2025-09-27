@@ -18,7 +18,35 @@ It contains a single script (`deploy.js`) that automates the entire setup for a 
 > 💡 **Analogy:**  
 > If `token-claim-service` is an ATM, this folder is the local bank simulator that provides dummy accounts and play money (tokens) to test the ATM.
 
-## 🚀 How to Use for Sandbox Testing
+## � Prerequisites
+
+### Directory Structure
+This helper expects the following directory structure:
+```
+parent-directory/
+├── ft/                    # FT contract source code
+│   └── target/wasm32-unknown-unknown/release/fungible_token.wasm
+├── ft-claiming-service/   # API service (optional for deployment)
+└── near-ft-helper/        # This helper repository
+```
+
+### Setup Steps
+1. **Clone FT Contract Repository**:
+   ```bash
+   git clone https://github.com/near-examples/FT.git ft
+   cd ft
+   cargo build --target wasm32-unknown-unknown --release
+   cd ..
+   ```
+
+2. **Clone This Helper**:
+   ```bash
+   git clone https://github.com/Psianturi/near-ft-helper.git
+   cd near-ft-helper
+   npm install
+   ```
+
+## �🚀 How to Use for Sandbox Testing
 
 *   Clone this repository:
    ```bash

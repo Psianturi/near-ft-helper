@@ -40,11 +40,26 @@ async function main() {
   console.log(`💰 Account balance: ${balance.available} yoctoNEAR`);
 
   // Deploy FT contract - use master account directly for simplicity
-  const ftContractAccountId = masterAccountId; // Use master account as FT contract
+  const ftContractAccountId = masterAccountId; 
   console.log(`🎯 Using master account as FT contract: ${ftContractAccountId}`);
 
   const ftAccount = masterAccount;
-  const wasm = fs.readFileSync('/mnt/d/POSMPROJECT/BLOCKCHAIN/NEAR/NEARN-FT/ft/target/wasm32-unknown-unknown/release/fungible_token.wasm');
+  
+  const wasmPath = '../ft/target/wasm32-unknown-unknown/release/fungible_token.wasm';
+
+  // Check if WASM file exists
+  if (!fs.existsSync(wasmPath)) {
+    console.error('❌ WASM file not found!');
+    console.error(`Expected path: ${wasmPath}`);
+    console.error('');
+    console.error('Please ensure:');
+    console.error('1. The FT contract repository is cloned at: ../ft');
+    console.error('2. The contract is compiled: cd ../ft && cargo build --target wasm32-unknown-unknown --release');
+    console.error('3. The WASM file exists at the expected location');
+    process.exit(1);
+  }
+
+  const wasm = fs.readFileSync(wasmPath);
 
   console.log('🚀 Deploying FT contract...');
   await ftAccount.deployContract(wasm);
