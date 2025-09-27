@@ -18,14 +18,40 @@ It contains a single script (`deploy.js`) that automates the entire setup for a 
 > 💡 **Analogy:**  
 > If `token-claim-service` is an ATM, this folder is the local bank simulator that provides dummy accounts and play money (tokens) to test the ATM.
 
-## � Prerequisites
+## 📋 Prerequisites
+
+### 🏗️ **FT Contract Source Code**
+
+This helper requires the **NEAR Fungible Token (FT) contract** source code to compile and deploy. The FT contract is the smart contract that implements the NEP-141 standard for fungible tokens on NEAR.
+
+#### **Where to Get the FT Contract:**
+**Repository**: https://github.com/near-examples/FT  
+**Purpose**: Official NEAR example implementation of NEP-141 Fungible Token standard  
+**Language**: Rust with NEAR SDK  
+**Standard**: NEP-141 (NEAR Enhancement Proposal 141)
+
+#### **What the FT Contract Does:**
+- ✅ **Token Creation**: Mint new tokens with specified total supply
+- ✅ **Token Transfer**: Transfer tokens between accounts (NEP-141 `ft_transfer`)
+- ✅ **Storage Management**: Handle storage deposits for token holders (NEP-145)
+- ✅ **Balance Queries**: Check account balances (`ft_balance_of`)
+- ✅ **Metadata**: Provide token information (name, symbol, decimals, etc.)
+- ✅ **Standards Compliance**: Full NEP-141 and NEP-145 compliance
+
+#### **Why This Specific Contract:**
+- **Official Example**: Maintained by NEAR team, well-tested
+- **Standards Compliant**: Implements latest NEP-141/145 standards
+- **Battle-Tested**: Used in production applications
+- **Well-Documented**: Clear code structure and comments
 
 ### Directory Structure
 This helper expects the following directory structure:
 ```
 parent-directory/
-├── ft/                    # FT contract source code
-│   └── target/wasm32-unknown-unknown/release/fungible_token.wasm
+├── ft/                    # FT contract source code (from near-examples/FT)
+│   ├── Cargo.toml         # Rust project configuration
+│   ├── src/lib.rs         # Smart contract implementation
+│   └── target/wasm32-unknown-unknown/release/fungible_token.wasm  # Compiled contract
 ├── ft-claiming-service/   # API service (optional for deployment)
 └── near-ft-helper/        # This helper repository
 ```
@@ -33,20 +59,34 @@ parent-directory/
 ### Setup Steps
 1. **Clone FT Contract Repository**:
    ```bash
+   # Clone the official NEAR FT example
    git clone https://github.com/near-examples/FT.git ft
+
+   # Navigate to contract directory
    cd ft
+
+   # Compile to WebAssembly for NEAR blockchain
    cargo build --target wasm32-unknown-unknown --release
+
+   # Return to parent directory
    cd ..
    ```
 
-2. **Clone This Helper**:
+2. **Clone This Helper Repository**:
    ```bash
    git clone https://github.com/Psianturi/near-ft-helper.git
    cd near-ft-helper
    npm install
    ```
 
-## �🚀 How to Use for Sandbox Testing
+### System Requirements
+- **Node.js**: 18+ (for deployment scripts)
+- **Rust**: Latest stable (for contract compilation)
+- **Cargo**: Rust package manager
+- **WASM Target**: `wasm32-unknown-unknown` (installed via rustup)
+- **NEAR CLI**: Optional, for manual testing
+
+## 🚀 How to Use for Sandbox Testing
 
 *   Clone this repository:
    ```bash
@@ -72,11 +112,6 @@ This command will start the sandbox, deploy the contract, and then wait. **Do no
 Once `deploy.js` is running, open a **new terminal** and navigate to the `token-claim-service` directory to start the server.
 
 See the `token-claim-service/README.md` for full instructions.
-
-## Prerequisites
-
--   Node.js 18+
--   The FT contract must be compiled to WASM at `ft/target/near/fungible_token.wasm`.
 
 ## Purpose
 
