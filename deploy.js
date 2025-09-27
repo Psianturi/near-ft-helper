@@ -13,13 +13,45 @@ async function main() {
   // Using root account from the worker to create sub-accounts.
   const root = worker.rootAccount;
   const ftContractAccount = await root.createSubAccount('ft');
-  const masterAccount = await root.createSubAccount('master');
+  const masterAccount = root; // Use root as master
   const userAccount = await root.createSubAccount('user');
 
   console.log(`\n--- Accounts Created ---`);
   console.log(`  Contract: ${ftContractAccount.accountId}`);
   console.log(`  Master (token owner): ${masterAccount.accountId}`);
   console.log(`  User (receiver): ${userAccount.accountId}`);
+
+  // Log private keys
+  console.log(`\n--- Private Keys ---`);
+  try {
+    console.log(`Root key: ${root.signer.keyPair.secretKey}`);
+  } catch (e) {
+    console.log(`Root key: undefined`);
+  }
+  try {
+    console.log(`Master key: ${masterAccount.signer.keyPair.secretKey}`);
+  } catch (e) {
+    console.log(`Master key: undefined`);
+  }
+  try {
+    console.log(`User key: ${userAccount.signer.keyPair.secretKey}`);
+  } catch (e) {
+    console.log(`User key: undefined`);
+  }
+
+  // Try to get from keyStore
+  try {
+    const rootKey = await worker.manager.keyStore.getKey('sandbox', root.accountId);
+    console.log(`Root key from keystore: ${rootKey.secretKey}`);
+  } catch (e) {
+    console.log(`Root key from keystore: error ${e.message}`);
+  }
+  try {
+    const masterKey = await worker.manager.keyStore.getKey('sandbox', masterAccount.accountId);
+    console.log(`Master key from keystore: ${masterKey.secretKey}`);
+  } catch (e) {
+    console.log(`Master key from keystore: error ${e.message}`);
+  }
 
   // 3. Deploy Contract
   const wasm = fs.readFileSync('/mnt/d/POSMPROJECT/BLOCKCHAIN/NEAR/NEARN-FT/ft/target/near/fungible_token.wasm');

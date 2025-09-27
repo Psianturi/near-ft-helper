@@ -11,6 +11,7 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "dotenv": "^17.2.2",
     "near-workspaces": "^4.0.0"
   },
   "repository": {
