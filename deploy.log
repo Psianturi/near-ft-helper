@@ -1,0 +1,441 @@
+
+up to date in 1s
+nohup: ignoring input
+--- Starting End-to-End Test ---
+✅ Sandbox started
+
+--- Accounts Created ---
+  Contract: ft.test.near
+  Master (token owner): test.near
+  User (receiver): user.test.near
+
+--- Private Keys ---
+Root key: undefined
+Master key: undefined
+User key: undefined
+Root key from keystore: 3VVDfBbxj6EYHNa2V5BN5qJaH9SWzKU3o2738YBnbR51
+Master key from keystore: 3VVDfBbxj6EYHNa2V5BN5qJaH9SWzKU3o2738YBnbR51
+
+--- Deploying contract from ---
+  /mnt/d/POSMPROJECT/BLOCKCHAIN/NEAR/NEARN-FT/ft/target/wasm32-unknown-unknown/release/fungible_token.wasm
+
+
+✅ FT contract deployed
+
+--- Initializing Contract & Minting Tokens ---
+Contract logs from ft.test.near.new_default_meta({"owner_id":"test.near","total_supply":"1000000000000000000000000"}) call: [
+  'EVENT_JSON:{"standard":"nep141","version":"1.0.0","event":"ft_mint","data":[{"owner_id":"test.near","amount":"1000000000000000000000000","memo":"new tokens are minted"}]}'
+]
+✅ Contract initialized. Tokens minted to test.near.
+  Initial balance of test.near: 1000000000000000000000000
+
+--- Registering User for Storage ---
+✅ User user.test.near is registered for FT storage.
+
+--- Performing FT Transfer ---
+Contract logs from ft.test.near.ft_transfer({"receiver_id":"user.test.near","amount":"500000000000000000000","memo":"Test transfer from deploy script"}) call: [
+  'EVENT_JSON:{"standard":"nep141","version":"1.0.0","event":"ft_transfer","data":[{"old_owner_id":"test.near","new_owner_id":"user.test.near","amount":"500000000000000000000","memo":"Test transfer from deploy script"}]}'
+]
+✅ Transferred 500000000000000000000 tokens from test.near to user.test.near.
+
+--- Final Balances ---
+  Balance of test.near: 999500000000000000000000
+  Balance of user.test.near: 500000000000000000000
+
+✅✅✅ End-to-End Test Successful! ✅✅✅
+
+🔄 Sandbox is now running and ready for benchmarking...
+📡 RPC endpoint: http://localhost:3030
+⏹️  Press Ctrl+C to stop the sandbox
+
+up to date in 496ms
+
+🛑 Shutting down sandbox...
+nohup: ignoring input
+--- Starting End-to-End Test ---
+✅ Sandbox started
+
+--- Accounts Created ---
+  Contract: ft.test.near
+  Master (token owner): test.near
+  User (receiver): user.test.near
+
+--- Private Keys ---
+Root key: undefined
+Master key: undefined
+User key: undefined
+Root key from keystore: 3Q4roeVCHfF5wC8pAPXEmcC7aXmSHMspjiWQvj1MRweg
+Master key from keystore: 3Q4roeVCHfF5wC8pAPXEmcC7aXmSHMspjiWQvj1MRweg
+
+--- Deploying contract from ---
+  /mnt/d/POSMPROJECT/BLOCKCHAIN/NEAR/NEARN-FT/ft/target/wasm32-unknown-unknown/release/fungible_token.wasm
+
+
+✅ FT contract deployed
+
+--- Initializing Contract & Minting Tokens ---
+Contract logs from ft.test.near.new_default_meta({"owner_id":"test.near","total_supply":"1000000000000000000000000"}) call: [
+  'EVENT_JSON:{"standard":"nep141","version":"1.0.0","event":"ft_mint","data":[{"owner_id":"test.near","amount":"1000000000000000000000000","memo":"new tokens are minted"}]}'
+]
+✅ Contract initialized. Tokens minted to test.near.
+  Initial balance of test.near: 1000000000000000000000000
+
+--- Registering User for Storage ---
+✅ User user.test.near is registered for FT storage.
+
+--- Performing FT Transfer ---
+Contract logs from ft.test.near.ft_transfer({"receiver_id":"user.test.near","amount":"500000000000000000000","memo":"Test transfer from deploy script"}) call: [
+  'EVENT_JSON:{"standard":"nep141","version":"1.0.0","event":"ft_transfer","data":[{"old_owner_id":"test.near","new_owner_id":"user.test.near","amount":"500000000000000000000","memo":"Test transfer from deploy script"}]}'
+]
+✅ Transferred 500000000000000000000 tokens from test.near to user.test.near.
+
+--- Final Balances ---
+  Balance of test.near: 999500000000000000000000
+  Balance of user.test.near: 500000000000000000000
+
+✅✅✅ End-to-End Test Successful! ✅✅✅
+
+🔄 Sandbox is now running and ready for benchmarking...
+📡 RPC endpoint: http://localhost:3030
+⏹️  Press Ctrl+C to stop the sandbox
+nohup: ignoring input
+--- Starting End-to-End Test ---
+✅ Sandbox started
+
+--- Accounts Created ---
+  Contract: ft.test.near
+  Master (token owner): test.near
+  User (receiver): user.test.near
+
+--- Private Keys ---
+Root key: undefined
+Master key: undefined
+User key: undefined
+Root key from keystore: FZFJ4ELVKcmJ4xmwPMnaEhDP4ict8nAGzYjWAfUkUE6W
+Master key from keystore: FZFJ4ELVKcmJ4xmwPMnaEhDP4ict8nAGzYjWAfUkUE6W
+
+--- Deploying contract from ---
+  /mnt/d/POSMPROJECT/BLOCKCHAIN/NEAR/NEARN-FT/ft/target/wasm32-unknown-unknown/release/fungible_token.wasm
+
+
+✅ FT contract deployed
+
+--- Initializing Contract & Minting Tokens ---
+Contract logs from ft.test.near.new_default_meta({"owner_id":"test.near","total_supply":"1000000000000000000000000"}) call: [
+  'EVENT_JSON:{"standard":"nep141","version":"1.0.0","event":"ft_mint","data":[{"owner_id":"test.near","amount":"1000000000000000000000000","memo":"new tokens are minted"}]}'
+]
+✅ Contract initialized. Tokens minted to test.near.
+  Initial balance of test.near: 1000000000000000000000000
+
+--- Registering User for Storage ---
+✅ User user.test.near is registered for FT storage.
+
+--- Performing FT Transfer ---
+Contract logs from ft.test.near.ft_transfer({"receiver_id":"user.test.near","amount":"500000000000000000000","memo":"Test transfer from deploy script"}) call: [
+  'EVENT_JSON:{"standard":"nep141","version":"1.0.0","event":"ft_transfer","data":[{"old_owner_id":"test.near","new_owner_id":"user.test.near","amount":"500000000000000000000","memo":"Test transfer from deploy script"}]}'
+]
+✅ Transferred 500000000000000000000 tokens from test.near to user.test.near.
+
+--- Final Balances ---
+  Balance of test.near: 999500000000000000000000
+  Balance of user.test.near: 500000000000000000000
+
+✅✅✅ End-to-End Test Successful! ✅✅✅
+
+🔄 Sandbox is now running and ready for benchmarking...
+📡 RPC endpoint: http://localhost:3030
+⏹️  Press Ctrl+C to stop the sandbox
+
+🛑 Shutting down sandbox...
+
+🛑 Shutting down sandbox...
+nohup: ignoring input
+--- Starting End-to-End Test ---
+✅ Sandbox started
+
+--- Accounts Created ---
+  Contract: ft.test.near
+  Master (token owner): test.near
+  User (receiver): user.test.near
+
+--- Private Keys ---
+Root key: undefined
+Master key: undefined
+User key: undefined
+Root key from keystore: 8DqTuixyUpzcmxqShyGv2UioAP11yd6k5rRNwiTkDsjm
+Master key from keystore: 8DqTuixyUpzcmxqShyGv2UioAP11yd6k5rRNwiTkDsjm
+
+--- Deploying contract from ---
+  /mnt/d/POSMPROJECT/BLOCKCHAIN/NEAR/NEARN-FT/ft/target/wasm32-unknown-unknown/release/fungible_token.wasm
+
+
+✅ FT contract deployed
+
+--- Initializing Contract & Minting Tokens ---
+Contract logs from ft.test.near.new_default_meta({"owner_id":"test.near","total_supply":"1000000000000000000000000"}) call: [
+  'EVENT_JSON:{"standard":"nep141","version":"1.0.0","event":"ft_mint","data":[{"owner_id":"test.near","amount":"1000000000000000000000000","memo":"new tokens are minted"}]}'
+]
+✅ Contract initialized. Tokens minted to test.near.
+  Initial balance of test.near: 1000000000000000000000000
+
+--- Registering User for Storage ---
+✅ User user.test.near is registered for FT storage.
+
+--- Performing FT Transfer ---
+Contract logs from ft.test.near.ft_transfer({"receiver_id":"user.test.near","amount":"500000000000000000000","memo":"Test transfer from deploy script"}) call: [
+  'EVENT_JSON:{"standard":"nep141","version":"1.0.0","event":"ft_transfer","data":[{"old_owner_id":"test.near","new_owner_id":"user.test.near","amount":"500000000000000000000","memo":"Test transfer from deploy script"}]}'
+]
+✅ Transferred 500000000000000000000 tokens from test.near to user.test.near.
+
+--- Final Balances ---
+  Balance of test.near: 999500000000000000000000
+  Balance of user.test.near: 500000000000000000000
+
+✅✅✅ End-to-End Test Successful! ✅✅✅
+
+🔄 Sandbox is now running and ready for benchmarking...
+📡 RPC endpoint: http://localhost:3030
+⏹️  Press Ctrl+C to stop the sandbox
+
+🛑 Shutting down sandbox...
+nohup: ignoring input
+--- Starting End-to-End Test ---
+✅ Sandbox started
+
+--- Accounts Created ---
+  Contract: ft.test.near
+  Master (token owner): test.near
+  User (receiver): user.test.near
+
+--- Private Keys ---
+Root key: undefined
+Master key: undefined
+User key: undefined
+Root key from keystore: DhfVCgBHvaj3vXtrS7QAUPyepcYK8TxcX974zAHXLd7A
+Master key from keystore: DhfVCgBHvaj3vXtrS7QAUPyepcYK8TxcX974zAHXLd7A
+
+--- Deploying contract from ---
+  /mnt/d/POSMPROJECT/BLOCKCHAIN/NEAR/NEARN-FT/ft/target/wasm32-unknown-unknown/release/fungible_token.wasm
+
+
+✅ FT contract deployed
+
+--- Initializing Contract & Minting Tokens ---
+Contract logs from ft.test.near.new_default_meta({"owner_id":"test.near","total_supply":"1000000000000000000000000"}) call: [
+  'EVENT_JSON:{"standard":"nep141","version":"1.0.0","event":"ft_mint","data":[{"owner_id":"test.near","amount":"1000000000000000000000000","memo":"new tokens are minted"}]}'
+]
+✅ Contract initialized. Tokens minted to test.near.
+  Initial balance of test.near: 1000000000000000000000000
+
+--- Registering User for Storage ---
+✅ User user.test.near is registered for FT storage.
+
+--- Performing FT Transfer ---
+Contract logs from ft.test.near.ft_transfer({"receiver_id":"user.test.near","amount":"500000000000000000000","memo":"Test transfer from deploy script"}) call: [
+  'EVENT_JSON:{"standard":"nep141","version":"1.0.0","event":"ft_transfer","data":[{"old_owner_id":"test.near","new_owner_id":"user.test.near","amount":"500000000000000000000","memo":"Test transfer from deploy script"}]}'
+]
+✅ Transferred 500000000000000000000 tokens from test.near to user.test.near.
+
+--- Final Balances ---
+  Balance of test.near: 999500000000000000000000
+  Balance of user.test.near: 500000000000000000000
+
+✅✅✅ End-to-End Test Successful! ✅✅✅
+
+🔄 Sandbox is now running and ready for benchmarking...
+📡 RPC endpoint: http://localhost:3030
+⏹️  Press Ctrl+C to stop the sandbox
+
+🛑 Shutting down sandbox...
+nohup: ignoring input
+--- Starting End-to-End Test ---
+✅ Sandbox started
+
+--- Accounts Created ---
+  Contract: ft.test.near
+  Master (token owner): test.near
+  User (receiver): user.test.near
+
+--- Private Keys ---
+Root key: undefined
+Master key: undefined
+User key: undefined
+Root key from keystore: 4HQPpKZ3cTukWkPzamDmM5s4SCbEYtnGbvaGZKq5bcPJ
+Master key from keystore: 4HQPpKZ3cTukWkPzamDmM5s4SCbEYtnGbvaGZKq5bcPJ
+
+--- Deploying contract from ---
+  /mnt/d/POSMPROJECT/BLOCKCHAIN/NEAR/NEARN-FT/ft/target/wasm32-unknown-unknown/release/fungible_token.wasm
+
+
+✅ FT contract deployed
+
+--- Initializing Contract & Minting Tokens ---
+Contract logs from ft.test.near.new_default_meta({"owner_id":"test.near","total_supply":"1000000000000000000000000"}) call: [
+  'EVENT_JSON:{"standard":"nep141","version":"1.0.0","event":"ft_mint","data":[{"owner_id":"test.near","amount":"1000000000000000000000000","memo":"new tokens are minted"}]}'
+]
+✅ Contract initialized. Tokens minted to test.near.
+  Initial balance of test.near: 1000000000000000000000000
+
+--- Registering User for Storage ---
+✅ User user.test.near is registered for FT storage.
+
+--- Performing FT Transfer ---
+Contract logs from ft.test.near.ft_transfer({"receiver_id":"user.test.near","amount":"500000000000000000000","memo":"Test transfer from deploy script"}) call: [
+  'EVENT_JSON:{"standard":"nep141","version":"1.0.0","event":"ft_transfer","data":[{"old_owner_id":"test.near","new_owner_id":"user.test.near","amount":"500000000000000000000","memo":"Test transfer from deploy script"}]}'
+]
+✅ Transferred 500000000000000000000 tokens from test.near to user.test.near.
+
+--- Final Balances ---
+  Balance of test.near: 999500000000000000000000
+  Balance of user.test.near: 500000000000000000000
+
+✅✅✅ End-to-End Test Successful! ✅✅✅
+
+🔄 Sandbox is now running and ready for benchmarking...
+📡 RPC endpoint: http://localhost:3030
+⏹️  Press Ctrl+C to stop the sandbox
+
+🛑 Shutting down sandbox...
+nohup: ignoring input
+--- Starting End-to-End Test ---
+✅ Sandbox started
+
+--- Accounts Created ---
+  Contract: ft.test.near
+  Master (token owner): test.near
+  User (receiver): user.test.near
+
+--- Private Keys ---
+Root key: undefined
+Master key: undefined
+User key: undefined
+Root key from keystore: HukJCwuBA2c75EwsNYUkbUQVQDWJ4oMJT2nL6zW95cVH
+Master key from keystore: HukJCwuBA2c75EwsNYUkbUQVQDWJ4oMJT2nL6zW95cVH
+
+--- Deploying contract from ---
+  /mnt/d/POSMPROJECT/BLOCKCHAIN/NEAR/NEARN-FT/ft/target/wasm32-unknown-unknown/release/fungible_token.wasm
+
+
+✅ FT contract deployed
+
+--- Initializing Contract & Minting Tokens ---
+Contract logs from ft.test.near.new_default_meta({"owner_id":"test.near","total_supply":"1000000000000000000000000"}) call: [
+  'EVENT_JSON:{"standard":"nep141","version":"1.0.0","event":"ft_mint","data":[{"owner_id":"test.near","amount":"1000000000000000000000000","memo":"new tokens are minted"}]}'
+]
+✅ Contract initialized. Tokens minted to test.near.
+  Initial balance of test.near: 1000000000000000000000000
+
+--- Registering User for Storage ---
+✅ User user.test.near is registered for FT storage.
+
+--- Performing FT Transfer ---
+Contract logs from ft.test.near.ft_transfer({"receiver_id":"user.test.near","amount":"500000000000000000000","memo":"Test transfer from deploy script"}) call: [
+  'EVENT_JSON:{"standard":"nep141","version":"1.0.0","event":"ft_transfer","data":[{"old_owner_id":"test.near","new_owner_id":"user.test.near","amount":"500000000000000000000","memo":"Test transfer from deploy script"}]}'
+]
+✅ Transferred 500000000000000000000 tokens from test.near to user.test.near.
+
+--- Final Balances ---
+  Balance of test.near: 999500000000000000000000
+  Balance of user.test.near: 500000000000000000000
+
+✅✅✅ End-to-End Test Successful! ✅✅✅
+
+🔄 Sandbox is now running and ready for benchmarking...
+📡 RPC endpoint: http://localhost:3030
+⏹️  Press Ctrl+C to stop the sandbox
+
+🛑 Shutting down sandbox...
+nohup: ignoring input
+--- Starting End-to-End Test ---
+✅ Sandbox started
+
+--- Accounts Created ---
+  Contract: ft.test.near
+  Master (token owner): test.near
+  User (receiver): user.test.near
+
+--- Private Keys ---
+Root key: undefined
+Master key: undefined
+User key: undefined
+Root key from keystore: GU2RHU4viszi6UzNhJYfkpsY64XJucnDsygoX1UgcMDw
+Master key from keystore: GU2RHU4viszi6UzNhJYfkpsY64XJucnDsygoX1UgcMDw
+
+--- Deploying contract from ---
+  /mnt/d/POSMPROJECT/BLOCKCHAIN/NEAR/NEARN-FT/ft/target/wasm32-unknown-unknown/release/fungible_token.wasm
+
+
+✅ FT contract deployed
+
+--- Initializing Contract & Minting Tokens ---
+Contract logs from ft.test.near.new_default_meta({"owner_id":"test.near","total_supply":"1000000000000000000000000"}) call: [
+  'EVENT_JSON:{"standard":"nep141","version":"1.0.0","event":"ft_mint","data":[{"owner_id":"test.near","amount":"1000000000000000000000000","memo":"new tokens are minted"}]}'
+]
+✅ Contract initialized. Tokens minted to test.near.
+  Initial balance of test.near: 1000000000000000000000000
+
+--- Registering User for Storage ---
+✅ User user.test.near is registered for FT storage.
+
+--- Performing FT Transfer ---
+Contract logs from ft.test.near.ft_transfer({"receiver_id":"user.test.near","amount":"500000000000000000000","memo":"Test transfer from deploy script"}) call: [
+  'EVENT_JSON:{"standard":"nep141","version":"1.0.0","event":"ft_transfer","data":[{"old_owner_id":"test.near","new_owner_id":"user.test.near","amount":"500000000000000000000","memo":"Test transfer from deploy script"}]}'
+]
+✅ Transferred 500000000000000000000 tokens from test.near to user.test.near.
+
+--- Final Balances ---
+  Balance of test.near: 999500000000000000000000
+  Balance of user.test.near: 500000000000000000000
+
+✅✅✅ End-to-End Test Successful! ✅✅✅
+
+🔄 Sandbox is now running and ready for benchmarking...
+📡 RPC endpoint: http://localhost:3030
+⏹️  Press Ctrl+C to stop the sandbox
+nohup: ignoring input
+--- Starting End-to-End Test ---
+✅ Sandbox started
+
+--- Accounts Created ---
+  Contract: ft.test.near
+  Master (token owner): test.near
+  User (receiver): user.test.near
+
+--- Private Keys ---
+Root key: undefined
+Master key: undefined
+User key: undefined
+Root key from keystore: Br3bpFmpjjoiSfSyaLhbguDxe16Uf2iZFQLGBWWVVG2X
+Master key from keystore: Br3bpFmpjjoiSfSyaLhbguDxe16Uf2iZFQLGBWWVVG2X
+
+--- Deploying contract from ---
+  /mnt/d/POSMPROJECT/BLOCKCHAIN/NEAR/NEARN-FT/ft/target/wasm32-unknown-unknown/release/fungible_token.wasm
+
+
+✅ FT contract deployed
+
+--- Initializing Contract & Minting Tokens ---
+Contract logs from ft.test.near.new_default_meta({"owner_id":"test.near","total_supply":"1000000000000000000000000"}) call: [
+  'EVENT_JSON:{"standard":"nep141","version":"1.0.0","event":"ft_mint","data":[{"owner_id":"test.near","amount":"1000000000000000000000000","memo":"new tokens are minted"}]}'
+]
+✅ Contract initialized. Tokens minted to test.near.
+  Initial balance of test.near: 1000000000000000000000000
+
+--- Registering User for Storage ---
+✅ User user.test.near is registered for FT storage.
+
+--- Performing FT Transfer ---
+Contract logs from ft.test.near.ft_transfer({"receiver_id":"user.test.near","amount":"500000000000000000000","memo":"Test transfer from deploy script"}) call: [
+  'EVENT_JSON:{"standard":"nep141","version":"1.0.0","event":"ft_transfer","data":[{"old_owner_id":"test.near","new_owner_id":"user.test.near","amount":"500000000000000000000","memo":"Test transfer from deploy script"}]}'
+]
+✅ Transferred 500000000000000000000 tokens from test.near to user.test.near.
+
+--- Final Balances ---
+  Balance of test.near: 999500000000000000000000
+  Balance of user.test.near: 500000000000000000000
+
+✅✅✅ End-to-End Test Successful! ✅✅✅
+
+🔄 Sandbox is now running and ready for benchmarking...
+📡 RPC endpoint: http://localhost:3030
+⏹️  Press Ctrl+C to stop the sandbox

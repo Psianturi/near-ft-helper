@@ -1,5 +1,29 @@
 const { Worker } = require('near-workspaces');
 const fs = require('fs');
+const path = require('path');
+
+function resolveFtWasmPath() {
+  const override = process.env.FT_WASM_PATH
+    ? path.resolve(process.env.FT_WASM_PATH)
+    : null;
+
+  const candidates = [
+    override,
+    path.resolve(__dirname, '../ft/target/near/fungible_token.wasm'),
+    path.resolve(__dirname, '../ft/target/wasm32-unknown-unknown/release/fungible_token.wasm'),
+    path.resolve(__dirname, '../ft-claiming-service/fungible_token.wasm'),
+  ].filter(Boolean);
+
+  for (const candidate of candidates) {
+    if (fs.existsSync(candidate)) {
+      return candidate;
+    }
+  }
+
+  throw new Error(
+    'fungible_token.wasm not found. Build the contract in ../ft (cargo build --target wasm32-unknown-unknown --release) or set FT_WASM_PATH.'
+  );
+}
 
 async function main() {
   console.log('--- Starting End-to-End Test ---');
@@ -54,7 +78,12 @@ async function main() {
   }
 
   // 3. Deploy Contract
-  const wasm = fs.readFileSync('/mnt/d/POSMPROJECT/BLOCKCHAIN/NEAR/NEARN-FT/ft/target/near/fungible_token.wasm');
+  const wasmPath = resolveFtWasmPath();
+  console.log(`
+--- Deploying contract from ---
+  ${wasmPath}
+`);
+  const wasm = fs.readFileSync(wasmPath);
   await ftContractAccount.deploy(wasm);
   console.log('\n✅ FT contract deployed');
 

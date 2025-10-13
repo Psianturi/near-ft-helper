@@ -1,18 +1,18 @@
 const { connect, keyStores, KeyPair } = require('near-api-js');
 const fs = require('fs');
-require('dotenv').config({ path: '../ft-claiming-service/.env.testnet' });
+require('dotenv').config({ path: '../ft-claiming-service/.env.testnet', override: true });
 
 async function main() {
   console.log('--- Starting Testnet Deployment ---');
 
   // Configuration
   const networkId = 'testnet';
-  const nodeUrl = 'https://rpc.testnet.fastnear.com';
+  const nodeUrl = 'https://test.rpc.fastnear.com';
   const masterAccountId = process.env.MASTER_ACCOUNT || 'your-testnet-account.testnet';
   const privateKey = process.env.MASTER_ACCOUNT_PRIVATE_KEY || 'your-private-key-here';
 
   if (masterAccountId === 'your-testnet-account.testnet' || privateKey === 'your-private-key-here') {
-    console.error('❌ Please set MASTER_ACCOUNT and MASTER_ACCOUNT_PRIVATE_KEY in .env');
+    console.error('❌ Please set MASTER_ACCOUNT and MASTER_ACCOUNT_PRIVATE_KEY in .env.testnet');
     console.log('Example:');
     console.log('MASTER_ACCOUNT=your-account.testnet');
     console.log('MASTER_ACCOUNT_PRIVATE_KEY=ed25519:...');
@@ -146,15 +146,19 @@ async function main() {
   }
 
   // Check balances
-  const masterBalance = await ftAccount.viewFunction(ftContractAccountId, 'ft_balance_of', { account_id: masterAccountId });
-  const userBalance = await ftAccount.viewFunction(ftContractAccountId, 'ft_balance_of', { account_id: userAccountId });
+  try {
+    const masterBalance = await ftAccount.viewFunction(ftContractAccountId, 'ft_balance_of', { account_id: masterAccountId });
+    const userBalance = await ftAccount.viewFunction(ftContractAccountId, 'ft_balance_of', { account_id: userAccountId });
 
-  console.log('\n--- Final Balances ---');
-  console.log(`Master (${masterAccountId}): ${masterBalance}`);
-  console.log(`User (${userAccountId}): ${userBalance}`);
+    console.log('\n--- Final Balances ---');
+    console.log(`Master (${masterAccountId}): ${masterBalance}`);
+    console.log(`User (${userAccountId}): ${userBalance}`);
+  } catch (error) {
+    console.log('⚠️  Could not check final balances, but deployment completed successfully');
+  }
 
   // Update .env with deployed contract
-  const envPath = '/mnt/d/POSMPROJECT/BLOCKCHAIN/NEAR/NEARN-FT/ft-claiming-service/.env';
+  const envPath = '/mnt/d/POSMPROJECT/BLOCKCHAIN/NEAR/NEARN-FT/ft-claiming-service/.env.testnet';
   let envContent = fs.readFileSync(envPath, 'utf8');
 
   envContent = envContent.replace(/FT_CONTRACT=.*/, `FT_CONTRACT=${ftContractAccountId}`);
